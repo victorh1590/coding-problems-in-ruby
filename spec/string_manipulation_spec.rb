@@ -10,6 +10,7 @@ describe StringManipulation do
   context "When not given a string" do
     it "should raise a TypeError telling what type was given." do
       expect { subject.count_characters(array_input) }.to raise_error(TypeError, "Expected String but was given Array.")
+      expect { subject.generate_histogram(hello) }.to raise_error(TypeError, "Expected Array but was given String.")
     end
   end
 
